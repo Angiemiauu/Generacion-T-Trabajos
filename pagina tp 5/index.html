@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TP5 – Modelo de Caja y Posicionamiento</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="card">
+    <h1>TP5 – Ejercicios de CSS</h1>
+    <p class="muted">Ejemplos prácticos de modelo de caja, posicionamiento, display y Google Fonts.</p>
+  </header>
+
+  <!-- Ejercicio 1 -->
+  <section class="card" id="ejercicio1">
+    <h2>Ejercicio 1: Modelo de Caja</h2>
+    <div class="row muted">
+      <span class="pill">content-box ➜ el tamaño crece sumando padding y borde</span>
+      <span class="pill">border-box ➜ el tamaño ya incluye padding y borde</span>
+    </div>
+
+    <div class="e1-grid">
+      <div class="e1-box content-box">
+        <img src="https://via.placeholder.com/150x300?text=Celular+1" alt="Celular content-box" />
+        <div>Caja Content-box</div>
+      </div>
+
+      <div class="e1-box border-box">
+        <img src="https://via.placeholder.com/150x300?text=Celular+2" alt="Celular border-box" />
+        <div>Caja Border-box</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ejercicio 2 -->
+  <section class="card" id="ejercicio2">
+    <h2>Ejercicio 2: Posicionamiento</h2>
+
+    <div class="e2-wrap">
+      <div class="e2-box e2-static">static</div>
+      <div class="e2-box e2-relative">relative</div>
+      <div class="e2-stage">
+        Contenedor relativo (referencia)
+        <div class="e2-absolute">absolute</div>
+      </div>
+    </div>
+
+    <p class="muted">Si bajás con el scroll vas a ver que el cuadro fijo sigue en la esquina 👇</p>
+  </section>
+
+  <div class="e2-fixed">fixed</div>
+
+  <!-- Ejercicio 3 -->
+  <section class="card" id="ejercicio3">
+    <h2>Ejercicio 3: Propiedad Display</h2>
+
+    <div class="demo-row">
+      <p class="d-inline">Texto 1</p>
+      <p class="d-inline">Texto 2</p>
+      <button class="d-inline">Botón inline</button>
+    </div>
+
+    <div class="demo-row">
+      <span class="d-block">Bloque 1</span>
+      <span class="d-block">Bloque 2</span>
+    </div>
+
+    <div class="demo-row">
+      <a href="#" class="d-inline-block box">Caja 1</a>
+      <a href="#" class="d-inline-block box">Caja 2</a>
+      <a href="#" class="d-inline-block box">Caja 3</a>
+    </div>
+
+    <div class="demo-row hide-area">
+      <span class="box to-hide">Este cuadro desaparece al pasar el mouse</span>
+      <span class="note">Pasá el mouse por esta fila</span>
+    </div>
+  </section>
+
+  <!-- Ejercicio 4 -->
+  <section class="card" id="ejercicio4">
+    <h2>Ejercicio 4: Google Fonts</h2>
+
+    <p class="font-before">
+      Texto con fuente normal (por defecto).
+    </p>
+    <p class="font-after">
+      Texto con la fuente Poppins (Google Fonts).
+    </p>
+  </section>
+
+</body>
+</html>

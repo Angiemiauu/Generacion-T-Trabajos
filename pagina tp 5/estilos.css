@@ -1,0 +1,204 @@
+:root { --bg:#f6b3e7; --bg2:#f1d2ed; --ink:#222; }
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--bg2), #9d5e79, var(--bg));
+  min-height: 100vh;
+  padding: 32px;
+}
+
+h1, h2 {
+  margin: 0 0 12px;
+  text-shadow: 1px 1px rgba(0,0,0,.2);
+}
+
+.card {
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 14px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 980px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.muted { opacity: .8; margin-top: 4px; }
+
+/* ===== Ejercicio 1: Modelo de caja ===== */
+.e1-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.e1-box {
+  width: 220px;
+  height: 320px;
+  padding: 20px;
+  border: 6px solid #333;
+  background:#cfe6ff;
+  color:#111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+  margin-inline: auto;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .3px;
+  border-radius: 10px;
+}
+
+.e1-box img {
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+
+.content-box { box-sizing: content-box; }
+.border-box  { box-sizing: border-box;  background:#dfffe2; border-color:#1f6b2f; }
+
+/* ===== Ejercicio 2: Posicionamiento ===== */
+.e2-wrap {
+  display:grid;
+  grid-template-columns: repeat(3, minmax(220px,1fr));
+  gap:20px;
+  align-items:start;
+  margin-bottom: 18px;
+}
+
+.e2-box {
+  background:#e6f0ff;
+  border:3px solid #334;
+  color:#111;
+  padding:16px;
+  min-height:100px;
+  box-shadow:0 4px 14px rgba(0,0,0,.15);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  border-radius:10px;
+}
+
+.e2-static { position: static; }
+.e2-relative { position: relative; top: -10px; left: 20px; background:#ffe9f5; border-color:#7a2a58; }
+
+.e2-stage {
+  position: relative;
+  border:2px dashed #888;
+  padding:40px;
+  min-height:160px;
+  background:rgba(0,0,0,.04);
+  color:#333;
+  font-weight:600;
+  border-radius:10px;
+}
+
+.e2-absolute {
+  position:absolute;
+  top:20px; right:20px;
+  width:140px; height:90px;
+  display:flex; align-items:center; justify-content:center;
+  background:#dfffe2;
+  border:3px solid #1f6b2f;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+
+.e2-fixed {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background:#ffd48a;
+  color:#222;
+  border: 3px solid #a86a00;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 9999;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* utilidades */
+.row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.pill { background:#00000012; border:1px solid #00000020; padding:6px 10px; border-radius:999px; font-size:.9rem; }
+
+/* ===== Ejercicio 3: Propiedad Display ===== */
+#ejercicio3 .demo-row {
+  border: 1px dashed rgba(0,0,0,.25);
+  background: rgba(255,255,255,.5);
+  padding: 12px;
+  margin: 12px 0;
+  display: block;
+}
+
+#ejercicio3 .d-inline {
+  display: inline;               /* se alinean en la misma línea */
+  padding: 6px 10px;
+  background: #eaf3ff;
+  border: 1px solid #6a8bc5;
+  margin-right: 8px;
+}
+
+#ejercicio3 .d-block {
+  display: block;                /* ocupa toda la fila, salta de línea */
+  padding: 8px 12px;
+  background: #fff1f6;
+  border: 1px solid #c27aa2;
+  margin: 6px 0;
+  max-width: 240px;
+}
+
+#ejercicio3 .d-inline-block {
+  display: inline-block;         /* en línea, pero acepta width/height */
+}
+
+#ejercicio3 .box {
+  width: 160px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #e6ffe9;
+  border: 1px solid #249a47;
+  border-radius: 8px;
+  margin: 6px 8px 6px 0;
+  font-weight: 700;
+  text-decoration: none;
+  color: #1c3a24;
+}
+
+#ejercicio3 .hide-area:hover .to-hide {
+  display: none;                 /* se oculta cuando el mouse está sobre la fila */
+}
+
+#ejercicio3 .note {
+  margin-left: 10px;
+  font-style: italic;
+  opacity: .8;
+}
+
+/* ===== Ejercicio 4: Google Fonts (Poppins) ===== */
+.font-before {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.1rem;
+  padding: 8px 10px;
+  background: rgba(0,0,0,.05);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.font-after {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* Google Fonts */
+  font-size: 1.1rem;
+  padding: 8px 10px;
+  background: rgba(0,0,0,.05);
+  border-radius: 8px;
+  font-weight: 700; /* remarcar el cambio de trazo */
+}
